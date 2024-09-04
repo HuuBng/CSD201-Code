@@ -9,8 +9,8 @@ public class Hw24_09_04 {
         int min = Integer.MAX_VALUE;
         int secMin = Integer.MAX_VALUE;
 
-        for(int i : arr) {
-            if(i < min) {
+        for (int i : arr) {
+            if (i < min) {
                 min = i;
             } else if (i < secMin) {
                 secMin = i;
@@ -25,8 +25,8 @@ public class Hw24_09_04 {
         int max = Integer.MIN_VALUE;
         int secMax = Integer.MIN_VALUE;
 
-        for(int i : arr) {
-            if(i > max) {
+        for (int i : arr) {
+            if (i > max) {
                 max = i;
             } else if (i > secMax) {
                 secMax = i;
@@ -42,7 +42,7 @@ public class Hw24_09_04 {
         String[] str_arr = str.split("");
         String[] result = new String[str_arr.length];
 
-        for(int i = 0; i < str_arr.length; i++) {
+        for (int i = 0; i < str_arr.length; i++) {
             result[i] = str_arr[str_arr.length - 1 - i];
         }
 
