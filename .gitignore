@@ -29,6 +29,9 @@ replay_pid*
 *.properties
 *.docx
 *.doc
-/CSD-Practice/nbproject/private/
+*.iml
+
+/.idea
+/CSD-Practice/nbproject/
 /CSD-Practice/build/
 /CSD-Practice/dist/
