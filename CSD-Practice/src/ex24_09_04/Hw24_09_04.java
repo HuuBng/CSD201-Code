@@ -11,8 +11,9 @@ public class Hw24_09_04 {
 
         for (int i : arr) {
             if (i < min) {
+                secMin = min;
                 min = i;
-            } else if (i < secMin) {
+            } else if (i < secMin && i != min) {
                 secMin = i;
             }
         }
@@ -27,8 +28,9 @@ public class Hw24_09_04 {
 
         for (int i : arr) {
             if (i > max) {
+                secMax = max;
                 max = i;
-            } else if (i > secMax) {
+            } else if (i > secMax && i != max) {
                 secMax = i;
             }
         }
