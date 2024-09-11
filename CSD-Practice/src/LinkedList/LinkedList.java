@@ -1,4 +1,4 @@
-package ex24_09_07;
+package LinkedList;
 
 public class LinkedList {
 
@@ -28,16 +28,21 @@ public class LinkedList {
             head = newNode;
             return;
         }
-        ListNode curNode = head;
-        while (curNode.next != null) {
-            curNode = curNode.next;
+        ListNode current = head;
+        while (current.next != null) {
+            current = current.next;
         }
-        curNode.next = newNode;
+        current.next = newNode;
+        newNode.next = null;
     }
 
     public void insertAtPos(int value, int pos) {
         if (pos == 1) {
-            insertAtHead(value);
+            this.insertAtHead(value);
+            return;
+        }
+        if (pos > this.findLength() || pos <= 0) {
+            System.out.println("Invalid position");
             return;
         }
         ListNode current = head;
@@ -53,8 +58,13 @@ public class LinkedList {
     }
 
     public void traversal() {
+        if (head == null) {
+            System.out.println("The list is empty");
+            return;
+        }
+
         ListNode current = head;
-        while (current.next != null) {
+        while (current != null) {
             System.out.print(current.value + " ----> ");
             current = current.next;
         }
@@ -71,6 +81,50 @@ public class LinkedList {
         return count;
     }
 
+    public void removeAtHead() {
+        if (head == null) {
+            System.out.println("The list is empty");
+            return;
+        }
+        head = head.next;
+    }
+
+    public void removeAtEnd() {
+        if (head == null) {
+            System.out.println("The list is empty");
+            return;
+        }
+
+        ListNode current = head;
+        while (current.next.next != null) {
+            current = current.next;
+        }
+        current.next = null;
+    }
+
+    public void removeAtPos(int pos) {
+        if (head == null) {
+            System.out.println("The list is empty");
+            return;
+        }
+        if (pos == 1) {
+            this.removeAtHead();
+            return;
+        }
+        if (pos > this.findLength() || pos <= 0) {
+            System.out.println("Invalid position");
+            return;
+        }
+        int count = 1;
+        ListNode current = head;
+        while (count < pos - 1) {
+            current = current.next;
+            count++;
+        }
+
+        current.next = current.next.next;
+    }
+
     public static void main(String[] args) {
         LinkedList myList = new LinkedList();
         ListNode first = new ListNode(10);
@@ -78,7 +132,7 @@ public class LinkedList {
 
         ListNode second = new ListNode(20);
         ListNode third = new ListNode(23);
-        ListNode fourth = new ListNode(12);
+        ListNode fourth = new ListNode(145);
 
         first.next = second;
         second.next = third;
@@ -87,9 +141,15 @@ public class LinkedList {
         myList.insertAtHead(2);
         myList.insertAtEnd(57);
         myList.insertAtPos(18, 4);
-
+        
         myList.traversal();
         System.out.println("Length: " + myList.findLength());
+
+        myList.removeAtEnd();
+        myList.removeAtPos(6);
+        myList.traversal();
+        /* TODO: Làm Circular linked list (1 chiều, last.next = head) và doubly linked list (có head và tail, đi 2 chiều) */
+
     }
 
 }

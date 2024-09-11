@@ -1,4 +1,4 @@
-package ex24_09_04;
+package Array;
 
 import java.util.Arrays;
 
@@ -47,8 +47,8 @@ public class Array {
         // Should use Integer.MAX_VALUE instead of arr[0]
         int min = Integer.MAX_VALUE;
 
-        for(int i : arr) {
-            if(i < min) {
+        for (int i : arr) {
+            if (i < min) {
                 min = i;
             }
         }
@@ -60,8 +60,8 @@ public class Array {
         // Should use Integer.MIN_VALUE instead of arr[0]
         int max = Integer.MIN_VALUE;
 
-        for(int i : arr) {
-            if(i > max) {
+        for (int i : arr) {
+            if (i > max) {
                 max = i;
             }
         }
