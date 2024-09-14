@@ -7,7 +7,7 @@ public class Stack {
     private Node top;
     private int length;
 
-    private class Node {
+    private static class Node {
         private int data;
         private Node next;
 
