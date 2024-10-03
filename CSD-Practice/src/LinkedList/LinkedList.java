@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class LinkedList {
+class LinkedList {
 
     private ListNode head;
 
@@ -141,7 +141,7 @@ public class LinkedList {
         myList.insertAtHead(2);
         myList.insertAtEnd(57);
         myList.insertAtPos(18, 4);
-        
+
         myList.traversal();
         System.out.println("Length: " + myList.findLength());
 

@@ -1,9 +1,8 @@
 package StackAndQueue;
 
-import java.util.Arrays;
 import java.util.Stack;
 
-public class ExStack {
+class ExStack {
 
     /*
      Problem 1: Check parenthesis

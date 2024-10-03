@@ -2,7 +2,7 @@ package Recursion;
 
 import java.util.Arrays;
 
-public class Recursion {
+class Recursion {
 
     // Sample 1:
     public static void sayHi(int count) {

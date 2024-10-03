@@ -2,7 +2,7 @@ package Array;
 
 import java.util.Arrays;
 
-public class Array {
+class Array {
 
     private static void printArray(int[] arr) {
         System.out.println(Arrays.toString(arr));

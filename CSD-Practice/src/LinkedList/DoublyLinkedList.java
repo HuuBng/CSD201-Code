@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class DoublyLinkedList {
+class DoublyLinkedList {
 
     private Node head;
 

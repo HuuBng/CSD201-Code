@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class CircularLinkedList {
+class CircularLinkedList {
 
     private Node head;
 

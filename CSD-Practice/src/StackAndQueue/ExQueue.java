@@ -3,7 +3,7 @@ package StackAndQueue;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ExQueue {
+class ExQueue {
 
     public static String[] printBinary(int n) {
         Queue<String> queue = new LinkedList<>();
