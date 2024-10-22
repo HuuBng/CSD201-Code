@@ -2,7 +2,7 @@ package Sort;
 
 import java.util.Arrays;
 
-public class Sorts {
+class Sorts {
     // time comp: O(n^2)
     public static void bubbleSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {

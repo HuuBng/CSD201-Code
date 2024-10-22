@@ -2,7 +2,7 @@ package Sort;
 
 import java.util.Arrays;
 
-public class MoreSorts {
+class MoreSorts {
     public static int[] merge(int[] arr1, int[] arr2) {
         int[] result = new int[arr1.length + arr2.length];
         int i = 0;

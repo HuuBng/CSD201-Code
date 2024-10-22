@@ -3,7 +3,7 @@ package Search;
 
 import java.util.Arrays;
 
-public class Search {
+class Search {
 
     public static int linearSearch(int[] array, int target) {
         for (int i = 0; i < array.length; i++) {
